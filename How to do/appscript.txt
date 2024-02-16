@@ -1,0 +1,71 @@
+Automatic OIL sheet
+
+
+connects differnt tools (google dox , drive etc)
+
+excel -> extentions -> app script(javaScript)
+
+to get info from google forms: automatically triggers a action
+
+go to triggers -> check screenshot 1
+
+use event e to get data which goes from google form to sheet
+
+see execution tab to see history and data from sheet in a  list
+
+organize the list data in jason file . see screenshot 2
+
+create a jsonify func and pass e 
+
+create a object(dict) #check data from execution tab to correctly index the key and value
+see screenshot 3
+see screenshot 4 for output
+
+the script runs whenever the from is submitted
+
+------------------------------------------------------------
+
+Salutation,pronous in OIL sheet refer screenshot 5
+
+-------------------------------------------------------------
+
+use generate_doc func and pss response as parameter
+
+get folder id from link from a seperate folder take from last '/' in the url
+see screenshot 6
+
+make a copy of sample OIL so no overwrite and its name will be offer_number in the folder from 34th point
+see screenshot 7
+
+get the doc id of new copy
+
+open the document by docid 
+see screenshot 8
+
+In the document replace text from body
+give the inputs from the doc {{}} and replace its real texts/value
+see screenshot 9
+
+
+save and close appscript screenshot 10
+ and do execution and give permisssion
+
+
+from blob file now save it as pdf, set name for it
+ screenshot 11
+
+now store this pdf to the respected folder
+screenshot 12,13
+
+return the values screenshot 14,15
+!!! remove pdf_id from return
+---------------------------------------------------------------
+
+Send the pdf through mail
+
+function sendMail (docblob, responces)
+create object and give subject , to , attachments and body
+screenshot 16
+
+
+now send the mail screenshot 17
